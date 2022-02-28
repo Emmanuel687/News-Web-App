@@ -16,4 +16,5 @@ def test():
 
 
 if __name__ == '__main__':
-    create_app.run()
+    manager.run()
+    

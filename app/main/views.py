@@ -23,13 +23,13 @@ def article(id):
     articles = article_source(id)
     return render_template('article.html',articles= articles,id=id )
 
-@main.route('/categories/<category_name>')
-def category(category_name):
+@main.route('/categories/<cat_name>')
+def category(cat_name):
     '''
     function to return the categories.html page and its content
     '''
-    category = get_category(category_name)
-    title = f'{category_name}'
-    cat = category_name
+    category = get_category(cat_name)
+    title = f'{cat_name}'
+    cat = cat_name
 
-    return render_template('categories.html',title = title,category = category, cat= category_name)
+    return render_template('categories.html',title = title,category = category, cat= cat_name)
