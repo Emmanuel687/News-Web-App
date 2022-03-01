@@ -109,7 +109,7 @@ def get_headlines():
     '''
     function that gets the response to the category json
     '''
-    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'.format(api_key)
+    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY{}'.format(api_key)
     print(get_headlines_url)
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
