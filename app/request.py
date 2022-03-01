@@ -6,7 +6,7 @@ api_key = None
 # Getting source url
 source_url= None
 # Getting source url
-category_url= None
+cat_url= None
 
 def configure_request(app):
     global api_key, source_url
@@ -87,11 +87,11 @@ def process_articles_results(news):
 
     return article_source_results
 
-def get_category(category_name):
+def get_category(cat_name):
     '''
     function that gets the response to the category json
     '''
-    get_category_url = category_url.format(category_name,api_key)
+    get_category_url = cat_url.format(cat_name,api_key)
     print(get_category_url)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
@@ -109,7 +109,7 @@ def get_headlines():
     '''
     function that gets the response to the category json
     '''
-    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY{}'.format(api_key)
+    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'.format(api_key)
     print(get_headlines_url)
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
