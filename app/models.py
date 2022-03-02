@@ -1,3 +1,5 @@
+
+  
 class Article:
     '''
     Class that instantiates objects of the news article objects of the news sources
