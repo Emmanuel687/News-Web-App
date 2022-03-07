@@ -1,5 +1,7 @@
 import urllib.request,json
-from .models import Article, Category, Source , Headlines
+from .models import Article, Source
+
+# urllib.request module that will help us create a connection to our API URL and send a request and json modules
 
 # Getting api key
 api_key = None
@@ -122,3 +124,5 @@ def get_headlines():
             get_headlines_results = process_articles_results(get_headlines_list)
 
     return get_headlines_results
+
+    # Request.py carrys code used to make request to API key.
