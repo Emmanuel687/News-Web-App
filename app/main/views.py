@@ -26,7 +26,7 @@ def article(id):
 @main.route('/categories/<cat_name>')
 def category(cat_name):
     '''
-    function to return the categories.html page and its contents 
+    function to return the categories.html page and its content
     '''
     category = get_category(cat_name)
     title = f'{cat_name}'
