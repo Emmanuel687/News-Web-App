@@ -6,9 +6,6 @@ from app import app
 def index():
 
     '''
-    Index page Function that returns root page views
+    Function that returns root page views
     '''
     return render_template('index.html')
-
-# Render template Searches for template file in app/template directory.
-
